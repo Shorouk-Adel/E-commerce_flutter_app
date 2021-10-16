@@ -25,17 +25,16 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0.0,
-        title: Center(
-          child: Text(
+        title: Text(
             'Home',
             style: TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w600,
                 color: Colors.black),
           ),
-        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -44,8 +43,8 @@ class _HomeState extends State<HomePage> {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             crossAxisCount: 2,
-            mainAxisSpacing: 0.50,
-            crossAxisSpacing: 0.50,
+            mainAxisSpacing: 3,
+            crossAxisSpacing: 3,
             childAspectRatio: 1 / 1.40,
             children: List.generate(
               listOfProducts.length,
@@ -56,9 +55,9 @@ class _HomeState extends State<HomePage> {
                       children: [
                         Padding(
                           padding: const EdgeInsetsDirectional.only(
-                            top: 2.5,
-                            start: 2.5,
-                            end: 2.5,
+                            top: 2.0,
+                            start: 2.0,
+                            end: 2.0,
                           ),
                           child: InkWell(
                             onTap: () {
@@ -75,7 +74,7 @@ class _HomeState extends State<HomePage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   AspectRatio(
-                                    aspectRatio: 6.5 / 6.5,
+                                    aspectRatio: 6.0 / 6.0,
                                     child: Image.network(
                                       listOfProducts[index].image.toString(),
                                       fit: BoxFit.fitHeight,
@@ -83,7 +82,7 @@ class _HomeState extends State<HomePage> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.fromLTRB(
-                                        4.0, 3.0, 4.0, 4.0),
+                                        1.0, 1.0,1.0, 1.0),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -92,20 +91,18 @@ class _HomeState extends State<HomePage> {
                                           listOfProducts[index].title,
                                           maxLines: 1,
                                           style: TextStyle(
-                                              fontSize: 14,
+                                              fontSize: 9.5,
                                               fontWeight: FontWeight.w500),
                                         ),
                                         SizedBox(
-                                          height: 2.0,
+                                          height: 1.0,
                                         ),
                                         Text(listOfProducts[index].name,
                                             maxLines: 1,
                                             style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: 8.5,
                                                 fontWeight: FontWeight.w500)),
-                                        SizedBox(
-                                          height: 8.0,
-                                        ),
+                                       
                                         Row(
                                           children: [
                                             IconButton(
@@ -125,13 +122,13 @@ class _HomeState extends State<HomePage> {
 
                                               },
                                             ),
-                                            SizedBox(width: 50,),
+                                            SizedBox(width: 15,),
                                             Row(
                                               children: [
                                                 Text(listOfProducts[index]
                                                     .price
                                                     .toString(),style: TextStyle(
-                                                  fontSize: 18,
+                                                  fontSize: 14,
                                                   fontWeight: FontWeight.w500,
                                                     color: Colors.red[700]
                                                 ),),
@@ -140,7 +137,7 @@ class _HomeState extends State<HomePage> {
                                                 ),
                                                 Text(
                                                   " EGP",style: TextStyle(
-                                                    fontSize: 18,
+                                                    fontSize: 11,
                                                     fontWeight: FontWeight.w500,
                                                   color: Colors.red[700]
                                                 ),
