@@ -28,16 +28,16 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Image.network(widget.model.image.toString(),
-            height: 400,
-            width: 300,
+            height: 180,
+            width: 150,
             fit: BoxFit.fitHeight,
           ),
-          SizedBox(height: 10.0,),
+          SizedBox(height: 5.0,),
 
           Text(widget.model.title.toString(),
             maxLines: 1,
             style: TextStyle(
-              fontSize: 20.0,
+              fontSize: 16.0,
               fontWeight: FontWeight.w500
             ),),
           SizedBox(
@@ -47,7 +47,7 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
           Text(widget.model.name.toString(),
             maxLines: 2,
             style: TextStyle(
-              fontSize: 18.0,
+              fontSize: 15.0,
               fontWeight: FontWeight.w500,
             ),),
           SizedBox(
@@ -55,37 +55,37 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
           ),
 
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Divider(color: Colors.black,thickness: 3.0,),
+            padding: const EdgeInsets.all(5.0),
+            child: Divider(color: Colors.black,thickness: 1.0,),
           ),
           SizedBox(
             height: 5,
           ),
 
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(11.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(widget.model.price.toString(),
                   maxLines: 2,
                   style: TextStyle(
-                    fontSize: 25.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.w500,
                   ),),
                 SizedBox(
-                  width: 5,
+                  width: 2.5,
                 ),
                 Text('EGP',
                   style: TextStyle(
-                    fontSize: 25.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.w500,
                   ),),
-                SizedBox(width: 200.0,),
+                SizedBox(width: 100.0,),
 
                 Container(
-                  height: 35,
-                  width: 35,
+                  height: 30,
+                  width: 30,
                   decoration:BoxDecoration(
                     color: Colors.red[700],
                     borderRadius: BorderRadius.circular(20)
@@ -103,14 +103,14 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                     )),
                 SizedBox(width: 15.0,),
                 Text('${counter}', style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.w500,
                   color: Colors.black
                 ),),
                 SizedBox(width: 15.0,),
                 Container(
-                    height: 35,
-                    width: 35,
+                    height: 30,
+                    width: 30,
                     decoration:BoxDecoration(
                         color: Colors.red[700],
                         borderRadius: BorderRadius.circular(20)
@@ -130,8 +130,8 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Divider(color: Colors.black,thickness: 3.0,),
+            padding: const EdgeInsets.all(5.0),
+            child: Divider(color: Colors.black,thickness: 1.0,),
           ),
           SizedBox(height: 5.0,),
 
@@ -140,7 +140,7 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
             child: Text(widget.model.description.toString(),
               maxLines: 2,
               style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 16.0,
                   fontWeight: FontWeight.w500
               ),),
           ),
