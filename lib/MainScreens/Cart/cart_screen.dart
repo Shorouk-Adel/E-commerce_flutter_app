@@ -46,8 +46,8 @@ class CartScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image.network(AppCubit.cartData[index].image,
-                                    width: 120,
-                                    height:120),
+                                    width: 100,
+                                    height:100),
                                 SizedBox(width: 1.0,)  ,
 
                                 SizedBox(
@@ -56,7 +56,7 @@ class CartScreen extends StatelessWidget {
                                     children: [
                                       Text(AppCubit.cartData[index].name,
                                           maxLines: 1,
-                                          style: TextStyle(fontSize: 15,color: Colors.black,
+                                          style: TextStyle(fontSize: 11,color: Colors.black,
                                               fontWeight:FontWeight.w600 )),
 
                                       Text(AppCubit.cartData[index].title,
@@ -70,22 +70,22 @@ class CartScreen extends StatelessWidget {
                                           Text(AppCubit.cartData[index].price.toString(),
                                             maxLines: 1,
                                             style: TextStyle(
-                                              fontSize: 18.0,
+                                              fontSize: 14.0,
                                               fontWeight: FontWeight.w400,
                                             ),),
                                           SizedBox(
-                                            width: 5,
+                                            width: 2.5,
                                           ),
                                           Text('EGP',
                                             style: TextStyle(
-                                              fontSize: 18.0,
+                                              fontSize: 14.0,
                                               fontWeight: FontWeight.w400,
                                             ),),
-                                          SizedBox(width: 80.0,),
+                                          SizedBox(width: 20.0,),
 
                                           Container(
-                                              height: 30,
-                                              width: 30,
+                                              height: 20,
+                                              width: 20,
                                               decoration:BoxDecoration(
                                                   color: Colors.red[700],
                                                   borderRadius: BorderRadius.circular(10)
@@ -101,18 +101,18 @@ class CartScreen extends StatelessWidget {
 
                                               },
                                                 icon:Icon(Icons.remove),
-                                                color: Colors.white,iconSize: 25,padding: EdgeInsets.only(),
+                                                color: Colors.white,iconSize: 20,padding: EdgeInsets.only(),
                                               )),
-                                          SizedBox(width: 5.0,),
+                                          SizedBox(width: 7.0,),
                                           Text(AppCubit.cartData[index].count.toString(), style: TextStyle(
-                                              fontSize: 25.0,
+                                              fontSize: 16.0,
                                               fontWeight: FontWeight.w500,
                                               color: Colors.black
                                           ),),
                                           SizedBox(width: 7.0,),
                                           Container(
-                                              height: 30,
-                                              width: 30,
+                                              height: 20,
+                                              width: 20,
                                               decoration:BoxDecoration(
                                                   color: Colors.red[700],
                                                   borderRadius: BorderRadius.circular(10)
@@ -123,18 +123,12 @@ class CartScreen extends StatelessWidget {
 
                                               },
                                                 icon:Icon(Icons.add),
-                                                color: Colors.white,iconSize: 25,padding: EdgeInsets.only(),
+                                                color: Colors.white,iconSize: 20,padding: EdgeInsets.only(),
                                               )),
 
                                         ],
                                       ),
-                                      /* Row(
-
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          CustomButton(function: (){}, text: 'Clear Cart')
-                        ],
-                      )*/
+                                      
 
 
                                     ],
